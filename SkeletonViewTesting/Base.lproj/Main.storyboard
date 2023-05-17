@@ -1,24 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SkeletonViewTesting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snY-Y4-Ms6">
+                                <rect key="frame" x="8" y="10" width="377" height="832"/>
+                                <subviews>
+                                    <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rlX-lt-9xZ">
+                                        <rect key="frame" x="12" y="16" width="353" height="788"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Eq-I9-BGy">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="220"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N0w-65-WXF">
+                                                        <rect key="frame" x="0.0" y="1.6666666666666572" width="353" height="177"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="phN-6g-44q"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ITk-G5-3x0">
+                                                        <rect key="frame" x="136.66666666666666" y="141" width="80" height="78.666666666666686"/>
+                                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="a6v-nc-Idc"/>
+                                                            <constraint firstAttribute="height" constant="80" id="aQJ-SQ-YdX"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="N0w-65-WXF" firstAttribute="top" secondItem="5Eq-I9-BGy" secondAttribute="top" id="Cyq-yZ-Spm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="N0w-65-WXF" secondAttribute="trailing" id="FUn-2n-F1e"/>
+                                                    <constraint firstItem="ITk-G5-3x0" firstAttribute="centerX" secondItem="5Eq-I9-BGy" secondAttribute="centerX" id="Jiz-FA-ew4"/>
+                                                    <constraint firstAttribute="height" constant="220" id="UZg-f6-cMT"/>
+                                                    <constraint firstItem="N0w-65-WXF" firstAttribute="leading" secondItem="5Eq-I9-BGy" secondAttribute="leading" id="cMc-qw-Wr3"/>
+                                                    <constraint firstItem="ITk-G5-3x0" firstAttribute="top" secondItem="N0w-65-WXF" secondAttribute="bottom" constant="-40" id="yLB-s7-TI1"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7C-WS-xhC">
+                                                <rect key="frame" x="0.0" y="232" width="353" height="19.333333333333343"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi4-Zg-Ljf" customClass="TTextField" customModule="DreamHouse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="263.33333333333331" width="353" height="40"/>
+                                                <color key="backgroundColor" white="0.9511895212" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="DM4-gz-ad6"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Email Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Df-Ug-Yw8">
+                                                <rect key="frame" x="0.0" y="315.33333333333331" width="353" height="19.333333333333314"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-d7-G9C" customClass="TTextField" customModule="DreamHouse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="346.66666666666669" width="353" height="40"/>
+                                                <color key="backgroundColor" white="0.9511895212" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="4od-LD-omi"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Phone Number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVy-Vb-0TA">
+                                                <rect key="frame" x="0.0" y="398.66666666666669" width="353" height="19.333333333333314"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ors-tB-Wbd" customClass="TTextField" customModule="DreamHouse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="430" width="353" height="40"/>
+                                                <color key="backgroundColor" white="0.9511895212" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="QYW-qq-OPF"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-ho-P2y">
+                                                <rect key="frame" x="0.0" y="482" width="353" height="19.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTm-vc-jWW">
+                                                <rect key="frame" x="0.0" y="513.33333333333337" width="353" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-fN-fTn" customClass="TTextField" customModule="DreamHouse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                                        <color key="backgroundColor" white="0.9511895212" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="IVC-Ch-Xoo"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syw-II-gGH">
+                                                        <rect key="frame" x="290.66666666666669" y="0.0" width="62.333333333333314" height="40"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="eye.slash.fill" catalog="system" title=" "/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Syw-II-gGH" secondAttribute="trailing" id="JcU-WU-DUZ"/>
+                                                    <constraint firstItem="KJb-fN-fTn" firstAttribute="top" secondItem="tTm-vc-jWW" secondAttribute="top" id="MF7-V8-luH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KJb-fN-fTn" secondAttribute="trailing" id="Mdb-yl-4Ss"/>
+                                                    <constraint firstItem="KJb-fN-fTn" firstAttribute="leading" secondItem="tTm-vc-jWW" secondAttribute="leading" id="RBI-gB-rEl"/>
+                                                    <constraint firstItem="Syw-II-gGH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tTm-vc-jWW" secondAttribute="leading" constant="20" symbolic="YES" id="Rly-I9-tKR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Syw-II-gGH" secondAttribute="bottom" id="hbo-DM-2Ne"/>
+                                                    <constraint firstItem="Syw-II-gGH" firstAttribute="top" secondItem="tTm-vc-jWW" secondAttribute="top" id="jxz-eH-Gqg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KJb-fN-fTn" secondAttribute="bottom" id="rp8-Sa-Nq3"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGU-VN-wbP">
+                                                <rect key="frame" x="0.0" y="565.33333333333337" width="353" height="19.333333333333371"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7x-cv-RLr" customClass="TTextField" customModule="DreamHouse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="596.66666666666663" width="353" height="40"/>
+                                                <color key="backgroundColor" white="0.9511895212" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="WYD-VV-xUK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4r-dh-XfO">
+                                                <rect key="frame" x="0.0" y="648.66666666666663" width="353" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8aH-aK-kKn">
+                                                        <rect key="frame" x="0.0" y="8" width="353" height="44"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-eM-wK0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="275" height="44"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                                                <state key="normal" title="Back">
+                                                                    <color key="titleColor" name="PrimaryDarkColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLq-7R-MMg" customClass="TButton" customModule="DreamHouse" customModuleProvider="target">
+                                                                <rect key="frame" x="283" y="0.0" width="70" height="44"/>
+                                                                <color key="backgroundColor" name="PrimaryDarkColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="7su-J0-kDc"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Update">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="8aH-aK-kKn" firstAttribute="leading" secondItem="H4r-dh-XfO" secondAttribute="leading" id="AGn-hU-tDM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8aH-aK-kKn" secondAttribute="bottom" constant="8" id="ZNH-cM-yKt"/>
+                                                    <constraint firstItem="8aH-aK-kKn" firstAttribute="top" secondItem="H4r-dh-XfO" secondAttribute="top" constant="8" id="kbh-q8-KEh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8aH-aK-kKn" secondAttribute="trailing" id="trW-B6-uHL"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-wz-8NN">
+                                                <rect key="frame" x="0.0" y="720.66666666666663" width="353" height="67.333333333333371"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Delete Account">
+                                                        <attributes>
+                                                            <color key="NSColor" name="PrimaryDarkColor"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rlX-lt-9xZ" secondAttribute="bottom" constant="28" id="0O6-Qv-EQL"/>
+                                    <constraint firstItem="rlX-lt-9xZ" firstAttribute="top" secondItem="snY-Y4-Ms6" secondAttribute="top" constant="16" id="68i-ar-eJc"/>
+                                    <constraint firstItem="rlX-lt-9xZ" firstAttribute="leading" secondItem="snY-Y4-Ms6" secondAttribute="leading" constant="12" id="Qj4-K5-uos"/>
+                                    <constraint firstAttribute="trailing" secondItem="rlX-lt-9xZ" secondAttribute="trailing" constant="12" id="ZTw-Rq-LXB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="snY-Y4-Ms6" secondAttribute="trailing" constant="8" id="8aT-ut-f82"/>
+                            <constraint firstAttribute="bottom" secondItem="snY-Y4-Ms6" secondAttribute="bottom" constant="10" id="CSY-SV-5ie"/>
+                            <constraint firstItem="snY-Y4-Ms6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="Wa0-o3-GZw"/>
+                            <constraint firstItem="snY-Y4-Ms6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="uF7-Rd-Wgn"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-25.190839694656489" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eye.slash.fill" catalog="system" width="128" height="85"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <namedColor name="PrimaryDarkColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
